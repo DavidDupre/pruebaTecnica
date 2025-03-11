@@ -27,7 +27,7 @@ Antes de comenzar, asegúrate de tener instalados los siguientes programas en tu
 
 - [Node.js](https://nodejs.org/) (para el frontend).
 - [Java](https://www.java.com/es/download/) y [Spring Boot](https://spring.io/projects/spring-boot) (para el backend).
-- [Maven](https://maven.apache.org/) o [Gradle](https://gradle.org/) (para gestionar las dependencias en el backend).
+- [Maven](https://maven.apache.org/) (para gestionar las dependencias en el backend).
 - **[MySQL](https://www.mysql.com/)** o cualquier otra base de datos que estés utilizando. Debes crear una base de datos con nombre `prueba_db` (o el que uses).
 - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) (opcional, pero recomendable para gestionar la base de datos).
 
