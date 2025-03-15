@@ -1,0 +1,59 @@
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Columnas -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="nombre">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef> Correo Electrónico </th>
+      <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="cargo">
+      <th mat-header-cell *matHeaderCellDef> Cargo </th>
+      <td mat-cell *matCellDef="let element"> {{element.cargo}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="fechaIngreso">
+      <th mat-header-cell *matHeaderCellDef> Fecha de Ingreso </th>
+      <td mat-cell *matCellDef="let element"> {{element.fechaIngreso}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="diasTrabajados">
+      <th mat-header-cell *matHeaderCellDef> Días Trabajados (calculado dinámicamente) </th>
+      <td mat-cell *matCellDef="let element"> {{element.diasTrabajados}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="contrato">
+      <th mat-header-cell *matHeaderCellDef> Contrato (botón para visualizar el archivo PDF que se creó) </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-raised-button color="primary" (click)="downloadContrato(element.id)">Descargar Contrato</button>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="acciones">
+      <th mat-header-cell *matHeaderCellDef> Acciones </th>
+      <td mat-cell *matCellDef="let element">
+
+        <button mat-raised-button color="accent" (click)="editUsuario(element)">Editar</button>
+
+        <button mat-raised-button color="warn" (click)="deleteUsuario(element.id)">Eliminar</button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <button mat-button (click)="refreshUsuarios()">Actualizar Usuarios</button>
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                 showFirstLastButtons
+                 aria-label="Select page of periodic elements">
+  </mat-paginator>
+</div>
