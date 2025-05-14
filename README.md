@@ -82,7 +82,7 @@ Esto iniciará el backend en http://localhost:8080.
 bash
 Copiar
 Editar
-git clone https://github.com/TheDarkness1/pruebaTecnica.git
+git clone https://github.com/DavidDupre/pruebaTecnica.git
 2. Entra en la carpeta del proyecto:
 
 bash
