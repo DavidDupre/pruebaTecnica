@@ -39,7 +39,7 @@ Sigue estos pasos para configurar el proyecto en tu máquina local.
 
 1. Clona el repositorio del backend:
    ```bash
-   git clone https://github.com/TheDarkness1/pruebaTecnica.git
+   git clone https://github.com/DavidDupre/pruebaTecnica.git
 2. Entra en la carpeta del proyecto:
 
   bash
